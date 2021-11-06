@@ -89,8 +89,8 @@ public class Wave : MonoBehaviour
             junk.transform.position = new Vector3(-9, rnd.Next(-3, 3), 0);
             junk.transform.Translate(Vector3.right * Time.deltaTime);
             junk.transform.localScale = new Vector3(4, 4, 4);
-            junk.GetComponent<Rigidbody2D>().velocity = new Vector3(rnd.Next(1, 3), 0, 0);
-            junk.GetComponent<Rigidbody2D>().angularVelocity = 100f;
+            junk.GetComponent<Rigidbody>().velocity = new Vector3((float)(rnd.NextDouble() * 2.5), 0, 0);
+            junk.GetComponent<Rigidbody>().angularVelocity = new Vector3(rnd.Next(0, 5), rnd.Next(0, 5), rnd.Next(0, 5));
             junkCreated++;
         }
 
