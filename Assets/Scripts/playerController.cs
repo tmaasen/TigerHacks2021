@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private Rigidbody rb;
     public float speed;
 
 
     // Use this for initialization
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame

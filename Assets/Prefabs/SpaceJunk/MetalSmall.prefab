@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3060170555859986675}
   - component: {fileID: 3060170555859986636}
   - component: {fileID: 8074047397236506916}
-  - component: {fileID: -1215130017414476584}
-  - component: {fileID: -2387856769362056252}
+  - component: {fileID: -5166292512221649370}
+  - component: {fileID: 4651477844588282437}
+  - component: {fileID: -5873445050644729768}
   m_Layer: 0
   m_Name: MetalSmall
   m_TagString: Untagged
@@ -85,54 +86,44 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3060170555859986637}
   m_Mesh: {fileID: -4697679056112797038, guid: fa4b109f5b6da40bcb993387dc817126, type: 3}
---- !u!50 &-1215130017414476584
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!54 &-5166292512221649370
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3060170555859986637}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  serializedVersion: 2
   m_Mass: 1
-  m_LinearDrag: 0
+  m_Drag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_Constraints: 8
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!60 &-2387856769362056252
-PolygonCollider2D:
+--- !u!135 &4651477844588282437
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3060170555859986637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.04
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-5873445050644729768
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3060170555859986637}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.043994095}
-      - {x: -0.041840874, y: 0.013594922}
-      - {x: -0.025859077, y: -0.035591975}
-      - {x: 0.025859086, y: -0.035591967}
-      - {x: 0.04184087, y: 0.013594929}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5567ad3ee8a16ea4d908d8af3360d668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
