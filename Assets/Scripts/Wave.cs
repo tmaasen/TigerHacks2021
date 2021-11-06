@@ -10,7 +10,7 @@ public class Wave : MonoBehaviour
     bool failedWave;
     public int currentWave;
     public int junkCount;
-
+    public GameObject spaceJunk;
 
     public void initWave(int pCurrentWave)
     {
@@ -85,7 +85,10 @@ public class Wave : MonoBehaviour
             //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(rnd.Next(1,pEndTimeInterval));
             Debug.Log("Junk # " + junkCreated + " created at " + Time.time);
-            // new SpaceJunk(rand Y, X) object
+            GameObject junk = Instantiate(spaceJunk) as GameObject;
+            junk.transform.position = new Vector3(-9, 0, 0);
+            junk.transform.Translate(Vector3.right * Time.deltaTime);
+            junk.transform.localScale = new Vector3(4, 4, 4);
             junkCreated++;
         }
 
@@ -96,9 +99,8 @@ public class Wave : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentWave = 1;
         StartCoroutine(initRandomJunk(15, 5));
-        initWave(1);
+        // initWave(1);
         // Debug.Log("Going to sleep");
         // initRandomJunk(5);
 
@@ -107,6 +109,7 @@ public class Wave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (completedWave)
         {
             currentWave++;
