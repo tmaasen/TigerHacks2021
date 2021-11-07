@@ -147,8 +147,13 @@ public class Wave : MonoBehaviour
     void Update()
     {
         Debug.Log("Junk: " + junkCollected);
+
         Text TextBoxToUse = GameObject.Find("Level").GetComponent<Text>();
         TextBoxToUse.text = "WAVE "+currentWave.ToString();
+
+        Text TextBoxToUse = GameObject.Find("Counter").GetComponent<Text>();
+        TextBoxToUse.text = "Junk Collected: "+junkCollected.ToString();
+
         
     }
 }
