@@ -3,7 +3,13 @@ guid: 0013ba8348acf5c4caead75fcbc3db29
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - metalSmall: {fileID: 3060170555859986637, guid: 0dbc3d10ed30f41e89b00a5844c740e6, type: 3}
+  - metalMedium: {fileID: 3735926253408294235, guid: 6f3ecbccdd71448d99c2a3e84e886c5e, type: 3}
+  - Broken_Sattelite: {fileID: 3563736128393206589, guid: d973176d1d3bb4f46bf3883bb1f06ff1, type: 3}
+  - metalAndGlass: {fileID: 3266320489695398583, guid: ce506534f6aab4d0f88e45830779e54f, type: 3}
+  - rocket: {fileID: 2329662229387119240, guid: 2db7f1d2f3952464ca9aa59d3b74c28b, type: 3}
+  - recorder: {fileID: 3092758720689440824, guid: f0844e233f8a0d3468b33035376ba683, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

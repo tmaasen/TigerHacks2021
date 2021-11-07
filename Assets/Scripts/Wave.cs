@@ -10,10 +10,13 @@ public class Wave : MonoBehaviour
     bool failedWave;
     public int currentWave;
     public int junkCount;
+    public int junkCollected = 0;
     public GameObject metalSmall;
     public GameObject metalMedium;
     public GameObject Broken_Sattelite;
     public GameObject metalAndGlass;
+    public GameObject rocket;
+    public GameObject recorder;
 
     public void initWave(int pCurrentWave)
     {
@@ -93,7 +96,7 @@ public class Wave : MonoBehaviour
             //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(rnd.Next(1,pEndTimeInterval));
 
-            GameObject[] junkPieces = new GameObject[] { metalSmall, metalSmall, metalSmall, metalMedium, Broken_Sattelite, metalAndGlass };
+            GameObject[] junkPieces = new GameObject[] { metalSmall, metalSmall, metalSmall, metalMedium, Broken_Sattelite, metalAndGlass, rocket, recorder };
             GameObject random = junkPieces[rnd.Next(0, junkPieces.Length)];
             GameObject junk = Instantiate(random) as GameObject;
             Debug.Log("Junk # " + junkCreated + " created at " + Time.time);
@@ -119,14 +122,5 @@ public class Wave : MonoBehaviour
     void Update()
     {
         
-        if (completedWave)
-        {
-            currentWave++;
-        }
-        if (failedWave)
-        {
-            // show final message
-        }
-
     }
 }
