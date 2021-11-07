@@ -85,7 +85,10 @@ public class Wave : MonoBehaviour
             //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(rnd.Next(1,pEndTimeInterval));
             Debug.Log("Junk # " + junkCreated + " created at " + Time.time);
-            GameObject junk = Instantiate(spaceJunk) as GameObject;
+            String[] tagArray = {"Junk 1", "Junk 2", "Junk 3", "Junk 4", "Junk 5", "Junk 6", "Junk 7", "Junk 8", "Junk 9", "Junk 10", "Junk 11", "Junk 12", "Junk 13"};
+
+            GameObject random = GameObject.FindWithTag(tagArray[rnd.Next(0,1)]);
+            GameObject junk = Instantiate(random) as GameObject;
             junk.transform.position = new Vector3((float)-9.1, rnd.Next(-3, 3), 0);
             junk.transform.Translate(Vector3.right * Time.deltaTime);
             junk.transform.localScale = new Vector3(4, 4, 4);
