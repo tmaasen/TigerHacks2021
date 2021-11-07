@@ -5,7 +5,7 @@ using UnityEngine;
 public class leaveField : MonoBehaviour
 {
     private int junkCollected = 0;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,11 @@ public class leaveField : MonoBehaviour
             Destroy(gameObject);
         } else if (collision.gameObject.name == "Drone") {
             Destroy(gameObject);
+            
+            Wave w = new Wave();
+            if (junkCollected == w.junkCount) {
+                w.initWave(w.currentWave++);
+            }
         } else if (collision.gameObject.transform.parent.name == "Boundaries") {
             Destroy(gameObject);
         } 
