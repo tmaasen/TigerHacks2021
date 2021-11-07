@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Threading;
 
@@ -133,6 +134,8 @@ public class Wave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Text TextBoxToUse = GameObject.Find("Level").GetComponent<Text>();
+        TextBoxToUse.text = "WAVE "+currentWave.ToString();
         
     }
 }
