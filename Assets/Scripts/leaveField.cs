@@ -17,9 +17,7 @@ public class leaveField : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.name == "Mothership") {
-            Destroy(gameObject);
-        } else if (collision.gameObject.transform.parent.name == "Boundaries") {
+        if (collision.gameObject.transform.parent.name == "Boundaries") {
             Destroy(gameObject);
         }
     }

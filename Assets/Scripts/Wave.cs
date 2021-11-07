@@ -10,7 +10,8 @@ public class Wave : MonoBehaviour
     bool failedWave;
     public int currentWave;
     public int junkCount;
-    public GameObject spaceJunk;
+    public GameObject metalSmall;
+    public GameObject metalMedium;
 
     public void initWave(int pCurrentWave)
     {
@@ -84,14 +85,14 @@ public class Wave : MonoBehaviour
         while (junkCreated <= pJunkCount){
             //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(rnd.Next(1,pEndTimeInterval));
-            Debug.Log("Junk # " + junkCreated + " created at " + Time.time);
-            String[] tagArray = {"Junk 1", "Junk 2", "Junk 3", "Junk 4", "Junk 5", "Junk 6", "Junk 7", "Junk 8", "Junk 9", "Junk 10", "Junk 11", "Junk 12", "Junk 13"};
 
-            GameObject random = GameObject.FindWithTag(tagArray[rnd.Next(0,1)]);
+            GameObject[] junkPieces = new GameObject[] { metalSmall, metalSmall, metalSmall, metalMedium };
+            GameObject random = junkPieces[rnd.Next(0, junkPieces.Length)];
             GameObject junk = Instantiate(random) as GameObject;
+            Debug.Log("Junk # " + junkCreated + " created at " + Time.time);
             junk.transform.position = new Vector3((float)-9.1, rnd.Next(-3, 3), 0);
             junk.transform.Translate(Vector3.right * Time.deltaTime);
-            junk.transform.localScale = new Vector3(4, 4, 4);
+            //junk.transform.localScale = new Vector3(4, 4, 4);
             junk.GetComponent<Rigidbody>().velocity = new Vector3((float)(rnd.NextDouble() * 2.5), 0, 0);
             junk.GetComponent<Rigidbody>().angularVelocity = new Vector3(rnd.Next(0, 5), rnd.Next(0, 5), rnd.Next(0, 5));
             junkCreated++;
