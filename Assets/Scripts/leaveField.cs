@@ -24,7 +24,9 @@ public class leaveField : MonoBehaviour
         } 
         // problem
         else if (collision.gameObject.transform.parent.name == "Boundaries") {
-            Destroy(gameObject);
+            if (collision.gameObject.name != "LeftWall") {
+                Destroy(gameObject);
+            }
         } 
     }
 }
