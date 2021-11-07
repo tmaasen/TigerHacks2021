@@ -23,7 +23,7 @@ public class collectJunk : MonoBehaviour
             waveDirector.GetComponent<Wave>().junkCollected++;
             Debug.Log("Incremented Junk Collected: " + waveDirector.GetComponent<Wave>().junkCollected);
         }
-        if (waveDirector.GetComponent<Wave>().junkCollected >= waveDirector.GetComponent<Wave>().junkCount) {
+        if (waveDirector.GetComponent<Wave>().junkCollected >= waveDirector.GetComponent<Wave>().junkCount-3) {
             waveDirector.GetComponent<Wave>().initWave(waveDirector.GetComponent<Wave>().currentWave++);
             Debug.Log("Wave " + waveDirector.GetComponent<Wave>().currentWave);
         }
