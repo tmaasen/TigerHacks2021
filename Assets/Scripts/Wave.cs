@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Threading;
 
@@ -146,6 +147,8 @@ public class Wave : MonoBehaviour
     void Update()
     {
         Debug.Log("Junk: " + junkCollected);
+        Text TextBoxToUse = GameObject.Find("Level").GetComponent<Text>();
+        TextBoxToUse.text = "WAVE "+currentWave.ToString();
         
     }
 }
