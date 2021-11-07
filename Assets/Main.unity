@@ -417,7 +417,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWave: 0
   junkCount: 0
-  spaceJunk: {fileID: 3060170555859986637, guid: 0dbc3d10ed30f41e89b00a5844c740e6, type: 3}
+  metalSmall: {fileID: 3060170555859986637, guid: 0dbc3d10ed30f41e89b00a5844c740e6, type: 3}
+  metalMedium: {fileID: 3735926253408294235, guid: 6f3ecbccdd71448d99c2a3e84e886c5e, type: 3}
 --- !u!4 &541443540
 Transform:
   m_ObjectHideFlags: 0
