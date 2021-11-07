@@ -15,6 +15,7 @@ public class howToPlayButtons : MonoBehaviour
 
     void PlayButton() {
         Debug.Log("You have clicked the play button!");
+        SceneManager.UnloadSceneAsync ("GameOver");
         SceneManager.LoadScene("Main", LoadSceneMode.Single);
         SceneManager.SetActiveScene(SceneManager.GetSceneByName("Main"));
     }

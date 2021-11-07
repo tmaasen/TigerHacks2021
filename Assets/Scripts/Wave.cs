@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Threading;
+using UnityEngine.SceneManagement;
 
 public class Wave : MonoBehaviour
 {
@@ -161,11 +162,9 @@ public class Wave : MonoBehaviour
         Text TextBox3 = GameObject.Find("LostJunk").GetComponent<Text>();
         TextBox3.text = "Junk Lost: "+ GameObject.Find("Drone").GetComponent<collectJunk>().orbitClutter;
         
-        if (GameObject.Find("Drone").GetComponent<collectJunk>().orbitClutter == 25) {
-            Time.timeScale = 0;
-            Application.LoadLevel("GameOver");
-            // pause game
-            // show game over screen with button to go back to main menu        
+        if (GameObject.Find("Drone").GetComponent<collectJunk>().orbitClutter == 5) {
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("GameOver"));      
         }
 
     }
