@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 2423076267568910978}
   - component: {fileID: 2750228751876011372}
   - component: {fileID: 2750228751876011371}
-  - component: {fileID: 4345304919433122209}
+  - component: {fileID: 3867037689281892687}
   m_Layer: 0
   m_Name: Recorder
   m_TagString: Junk
@@ -424,7 +424,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.76, y: 1.37, z: 0.52}
   m_Center: {x: -0.78, y: 0.62, z: 0.16}
---- !u!114 &4345304919433122209
+--- !u!114 &3867037689281892687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -436,6 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5567ad3ee8a16ea4d908d8af3360d668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
 --- !u!1 &3508538329506035237
 GameObject:
   m_ObjectHideFlags: 0

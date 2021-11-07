@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5979317825074652087}
   - component: {fileID: 6156548906864936030}
   - component: {fileID: 4517463961937691547}
-  - component: {fileID: -8308582490057712705}
+  - component: {fileID: -5851588016105578542}
   m_Layer: 0
   m_Name: Box
   m_TagString: Junk
@@ -147,7 +147,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
---- !u!114 &-8308582490057712705
+--- !u!114 &-5851588016105578542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,3 +159,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5567ad3ee8a16ea4d908d8af3360d668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}

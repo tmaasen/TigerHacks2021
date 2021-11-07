@@ -5,7 +5,9 @@ using UnityEngine;
 public class collectJunk : MonoBehaviour
 {
 
-    public GameObject waveDirector;
+    public GameObject waveThingy;
+    public int orbitClutter;
+
     // Start is called before the first frame update
     void Start()
     {

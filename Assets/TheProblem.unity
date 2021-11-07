@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9622642, g: 0.104396604, b: 0.104396604, a: 1}
+  m_Color: {r: 0.3516458, g: 0.74509805, b: 0.990566, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.43268538, b: 1, a: 1}
+  m_Color: {r: 0.3254717, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -385,24 +385,25 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 135
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: Currently orbiting in our upper atmosphere is 1900 tons of space junk.
-    Chunks of destroyed satellites, leftover sections of rockets, shards of past
-    missile tests, these pieces of trash pose an incredible danger to future space
-    travel. The speeds at which these shards travel  is around 17,500mph, more than
-    enough to annihilate anything they come into contact with. If not properly managed
-    this problem will cascade and escalate until orbit is an inescapable barrier
-    of deadly debris.
+  m_Text: Currently orbiting in our upper atmosphere is 1,900 TONS of space junk.
+    This junk includes chunks of destroyed satellites, leftover sections of rockets,
+    shards of past missile tests, and many other forms of waste resulting from human
+    endevours in space. These pieces of trash pose an incredible danger to future
+    space travel. Travelling at roughly 17,500mph, these peices of shrapnel have
+    the ability to annihilate anything they come into contact with. If not properly
+    managed this problem will cascade and escalate until an inescapable barrier of
+    deadly debris is orbiting the earth.
 --- !u!222 &685240732
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -411,6 +412,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685240729}
   m_CullTransparentMesh: 1
+--- !u!1 &845361034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845361036}
+  - component: {fileID: 845361035}
+  m_Layer: 0
+  m_Name: Buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &845361035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845361034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923ec7991dffa453ba89138aa851c4bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_YourFirstButton: {fileID: 1747640930}
+  m_YourSecondButton: {fileID: 401441297}
+--- !u!4 &845361036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845361034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.531737, y: 466.8888, z: -22.29627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &869789934
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +874,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1747640931}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1747640931
 MonoBehaviour:
   m_ObjectHideFlags: 0
