@@ -6,6 +6,7 @@ public class leaveField : MonoBehaviour
 {
     private int junkCollected = 0;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,13 +23,9 @@ public class leaveField : MonoBehaviour
             Destroy(gameObject);
         } else if (collision.gameObject.name == "Drone") {
             Destroy(gameObject);
-            Wave w = new Wave();
-            w.junkCollected++;
-            Debug.Log("Collected " + w.junkCollected);
-            if (junkCollected == w.junkCount) {
-                w.initWave(w.currentWave++);
-            }
-        } else if (collision.gameObject.transform.parent.name == "Boundaries") {
+        } 
+        // problem
+        else if (collision.gameObject.transform.parent.name == "Boundaries") {
             Destroy(gameObject);
         } 
     }

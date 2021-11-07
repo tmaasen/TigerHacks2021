@@ -26,7 +26,7 @@ public class Wave : MonoBehaviour
             case 1:
                 if (currentWave == 1)
                 {
-                    junkCount = 15;
+                    junkCount = 5;
                     string l1GTmessage = "Using resources from junk to upgrade your drone and build rooms is crucial to success.";
                     string l1SFmessage = "Force of impact isn't the only danger junk poses to spacecraft. Small impacts can cause releases of plasma that badly damage electrical panels.";
                     StartCoroutine(initRandomJunk(junkCount, 5));
