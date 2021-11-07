@@ -17,6 +17,7 @@ public class Wave : MonoBehaviour
     public GameObject metalAndGlass;
     public GameObject rocket;
     public GameObject recorder;
+    public GameObject box;
 
     public void initWave(int pCurrentWave)
     {
@@ -26,7 +27,7 @@ public class Wave : MonoBehaviour
             case 1:
                 if (currentWave == 1)
                 {
-                    junkCount = 5;
+                    junkCount = 15;
                     string l1GTmessage = "Using resources from junk to upgrade your drone and build rooms is crucial to success.";
                     string l1SFmessage = "Force of impact isn't the only danger junk poses to spacecraft. Small impacts can cause releases of plasma that badly damage electrical panels.";
                     StartCoroutine(initRandomJunk(junkCount, 5));
@@ -96,7 +97,7 @@ public class Wave : MonoBehaviour
             //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(rnd.Next(1,pEndTimeInterval));
 
-            GameObject[] junkPieces = new GameObject[] { metalSmall, metalSmall, metalSmall, metalMedium, Broken_Sattelite, metalAndGlass, rocket, recorder };
+            GameObject[] junkPieces = new GameObject[] { metalSmall, metalSmall, metalSmall, metalMedium, Broken_Sattelite, metalAndGlass, rocket, recorder, box };
             GameObject random = junkPieces[rnd.Next(0, junkPieces.Length)];
             GameObject junk = Instantiate(random) as GameObject;
             Debug.Log("Junk # " + junkCreated + " created at " + Time.time);
