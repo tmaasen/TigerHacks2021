@@ -15,6 +15,8 @@ public class Wave : MonoBehaviour
 
     public void initWave(int pCurrentWave)
     {
+        currentWave = pCurrentWave;
+        Debug.Log("Current Wave " + currentWave);
         switch (pCurrentWave)
         {
             case 1:
@@ -23,6 +25,7 @@ public class Wave : MonoBehaviour
                     // metal (S,M) and glass (S)
                     // Material Metal = new Material(true, true, false);
                     // Material Glass = new Material(true, false, false);
+                    Debug.Log("Current Wave " + currentWave);
                     junkCount = 15;
                     string message = "";
                     StartCoroutine(initRandomJunk(junkCount, 5));
@@ -105,8 +108,8 @@ public class Wave : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(initRandomJunk(15, 5));
-        // initWave(1);
+        // StartCoroutine(initRandomJunk(15, 5));
+        initWave(1);
         // Debug.Log("Going to sleep");
         // initRandomJunk(5);
 
