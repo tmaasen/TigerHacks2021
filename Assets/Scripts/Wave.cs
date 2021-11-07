@@ -162,7 +162,7 @@ public class Wave : MonoBehaviour
         Text TextBox3 = GameObject.Find("LostJunk").GetComponent<Text>();
         TextBox3.text = "Junk Lost: "+ GameObject.Find("Drone").GetComponent<collectJunk>().orbitClutter;
         
-        if (GameObject.Find("Drone").GetComponent<collectJunk>().orbitClutter == 5) {
+        if (GameObject.Find("Drone").GetComponent<collectJunk>().orbitClutter == 25) {
             SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("GameOver"));      
         }

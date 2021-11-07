@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TheProblem.unity
     guid: 24e9bc37ed53544469b3e91cd27dc85a
+  - enabled: 1
+    path: Assets/GameOver.unity
+    guid: 5ee5198f13d7b47278d85b700cd6b352
   m_configObjects: {}
