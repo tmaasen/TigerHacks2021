@@ -22,18 +22,21 @@ public class collectJunk : MonoBehaviour
         if (collision.gameObject.tag == "Junk") {
             waveDirector.GetComponent<Wave>().junkCollected++;
             Debug.Log("Incremented Junk Collected: " + waveDirector.GetComponent<Wave>().junkCollected);
+            Debug.Log("Current Level: " + waveDirector.GetComponent<Wave>().currentWave);
         }
-        if (waveDirector.GetComponent<Wave>().junkCollected >= waveDirector.GetComponent<Wave>().junkCount-3) {
-            waveDirector.GetComponent<Wave>().initWave(waveDirector.GetComponent<Wave>().currentWave++);
+        if (waveDirector.GetComponent<Wave>().junkCollected >= waveDirector.GetComponent<Wave>().junkCount) {
+            waveDirector.GetComponent<Wave>().completedWave = true;
+            waveDirector.GetComponent<Wave>().currentWave++;
+            waveDirector.GetComponent<Wave>().initWave(waveDirector.GetComponent<Wave>().currentWave);
             Debug.Log("Wave " + waveDirector.GetComponent<Wave>().currentWave);
         }
-        if (collision.gameObject.transform.parent.name == "Boundaries") {
-            // Destroy(gameObject);
-            waveDirector.GetComponent<Wave>().orbitClutter++;
-            Debug.Log("Orbit Cluster is " + waveDirector.GetComponent<Wave>().orbitClutter);
-            if(waveDirector.GetComponent<Wave>().orbitClutter >= 100) {
-                Application.Quit();
-            }
-        } 
+        // if (collision.gameObject.transform.parent.name == "Boundaries") {
+        //     // Destroy(gameObject);
+        //     waveDirector.GetComponent<Wave>().orbitClutter++;
+        //     Debug.Log("Orbit Cluster is " + waveDirector.GetComponent<Wave>().orbitClutter);
+        //     if(waveDirector.GetComponent<Wave>().orbitClutter >= 100) {
+        //         Application.Quit();
+        //     }
+        // } 
     }
 }

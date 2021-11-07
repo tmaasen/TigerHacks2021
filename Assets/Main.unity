@@ -415,8 +415,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0013ba8348acf5c4caead75fcbc3db29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  completedWave: 0
+  failedWave: 0
   currentWave: 0
   junkCount: 0
+  orbitClutter: 0
   junkCollected: 0
   metalSmall: {fileID: 3060170555859986637, guid: 0dbc3d10ed30f41e89b00a5844c740e6, type: 3}
   metalMedium: {fileID: 3735926253408294235, guid: 6f3ecbccdd71448d99c2a3e84e886c5e, type: 3}
@@ -646,7 +649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4735194838654956, guid: ceb2e69d6fcbbcf4eb36a02462f60ce6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.37
+      value: -2.37
       objectReference: {fileID: 0}
     - target: {fileID: 4735194838654956, guid: ceb2e69d6fcbbcf4eb36a02462f60ce6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1002,7 +1005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4260686614427368, guid: 09eef1c2dc8961249a5567081bca030d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.28
+      value: -3.28
       objectReference: {fileID: 0}
     - target: {fileID: 4260686614427368, guid: 09eef1c2dc8961249a5567081bca030d, type: 3}
       propertyPath: m_LocalPosition.z

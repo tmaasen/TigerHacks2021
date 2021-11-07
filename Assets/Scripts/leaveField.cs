@@ -22,10 +22,10 @@ public class leaveField : MonoBehaviour
             Destroy(gameObject);
         } 
         // problem
-        else if (collision.gameObject.transform.parent.name == "Boundaries") {
-            if (collision.gameObject.name != "LeftWall") {
-                Destroy(gameObject);
-            }
-        } 
+        // else if (collision.gameObject.transform.parent.name == "Boundaries") {
+        //     if (collision.gameObject.name != "LeftWall") {
+        //         Destroy(gameObject);
+        //     }
+        // } 
     }
 }
