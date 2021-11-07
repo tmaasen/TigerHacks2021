@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 331558504}
   m_Layer: 0
   m_Name: Boundaries
-  m_TagString: Untagged
+  m_TagString: DestroyJunk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -942,6 +942,10 @@ PrefabInstance:
     - target: {fileID: 1650942366470562, guid: 09eef1c2dc8961249a5567081bca030d, type: 3}
       propertyPath: m_Name
       value: Mothership
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650942366470562, guid: 09eef1c2dc8961249a5567081bca030d, type: 3}
+      propertyPath: m_TagString
+      value: DestroyJunk
       objectReference: {fileID: 0}
     - target: {fileID: 4260686614427368, guid: 09eef1c2dc8961249a5567081bca030d, type: 3}
       propertyPath: m_RootOrder
