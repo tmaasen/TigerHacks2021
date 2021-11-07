@@ -419,6 +419,8 @@ MonoBehaviour:
   junkCount: 0
   metalSmall: {fileID: 3060170555859986637, guid: 0dbc3d10ed30f41e89b00a5844c740e6, type: 3}
   metalMedium: {fileID: 3735926253408294235, guid: 6f3ecbccdd71448d99c2a3e84e886c5e, type: 3}
+  Broken_Sattelite: {fileID: 3563736128393206589, guid: d973176d1d3bb4f46bf3883bb1f06ff1, type: 3}
+  metalAndGlass: {fileID: 784474397089926005, guid: 7a3fecff710e6374ba3f8e20e4d1a5da, type: 3}
 --- !u!4 &541443540
 Transform:
   m_ObjectHideFlags: 0

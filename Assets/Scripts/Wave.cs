@@ -12,20 +12,17 @@ public class Wave : MonoBehaviour
     public int junkCount;
     public GameObject metalSmall;
     public GameObject metalMedium;
+    public GameObject Broken_Sattelite;
+    public GameObject metalAndGlass;
 
     public void initWave(int pCurrentWave)
     {
         currentWave = pCurrentWave;
-        Debug.Log("Current Wave " + currentWave);
         switch (pCurrentWave)
         {
             case 1:
                 if (currentWave == 1)
                 {
-                    // metal (S,M) and glass (S)
-                    // Material Metal = new Material(true, true, false);
-                    // Material Glass = new Material(true, false, false);
-                    Debug.Log("Current Wave " + currentWave);
                     junkCount = 15;
                     string message = "";
                     StartCoroutine(initRandomJunk(junkCount, 5));
@@ -89,7 +86,7 @@ public class Wave : MonoBehaviour
             //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(rnd.Next(1,pEndTimeInterval));
 
-            GameObject[] junkPieces = new GameObject[] { metalSmall, metalSmall, metalSmall, metalMedium };
+            GameObject[] junkPieces = new GameObject[] { metalSmall, metalSmall, metalSmall, metalMedium, Broken_Sattelite, metalAndGlass };
             GameObject random = junkPieces[rnd.Next(0, junkPieces.Length)];
             GameObject junk = Instantiate(random) as GameObject;
             Debug.Log("Junk # " + junkCreated + " created at " + Time.time);
@@ -108,11 +105,7 @@ public class Wave : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // StartCoroutine(initRandomJunk(15, 5));
         initWave(1);
-        // Debug.Log("Going to sleep");
-        // initRandomJunk(5);
-
     }
 
     // Update is called once per frame
