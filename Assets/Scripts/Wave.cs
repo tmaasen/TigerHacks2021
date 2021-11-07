@@ -86,7 +86,7 @@ public class Wave : MonoBehaviour
             //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(rnd.Next(1,pEndTimeInterval));
 
-            GameObject[] junkPieces = new GameObject[] { metalSmall, metalMedium };
+            GameObject[] junkPieces = new GameObject[] { metalSmall, metalSmall, metalSmall, metalMedium };
             GameObject random = junkPieces[rnd.Next(0, junkPieces.Length)];
             GameObject junk = Instantiate(random) as GameObject;
             Debug.Log("Junk # " + junkCreated + " created at " + Time.time);
