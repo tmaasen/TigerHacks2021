@@ -160,8 +160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40.9, y: -271.8}
-  m_SizeDelta: {x: 420.3, y: 65.6}
+  m_AnchoredPosition: {x: -803, y: -465}
+  m_SizeDelta: {x: 160, y: 65.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &401441297
 MonoBehaviour:
@@ -280,8 +280,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.5, y: 380.4}
-  m_SizeDelta: {x: 197.8, y: 38.4}
+  m_AnchoredPosition: {x: 244, y: 290.1}
+  m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439414865
 MonoBehaviour:
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6320754, g: 0, b: 0.1091642, a: 1}
+  m_Color: {r: 0.3516458, g: 0.74509805, b: 0.990566, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -310,13 +310,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 78
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GAME OVER
+  m_Text: The Real Life Problem We Are Facing
 --- !u!222 &439414866
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -360,7 +360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: -90}
+  m_AnchoredPosition: {x: 9, y: -52.9}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &685240731
@@ -390,15 +390,20 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 135
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: 'Tough isn''t it? It would be tough for anyone to do on their own. That
-    is why we need to raise awareness right now for this issue so that it does not
-    become an impossible problem to solve in the future.  '
+  m_Text: Currently orbiting in our upper atmosphere is 1,900 TONS of space junk.
+    This junk includes chunks of destroyed satellites, leftover sections of rockets,
+    shards of past missile tests, and many other forms of waste resulting from human
+    endevours in space. These pieces of trash pose an incredible danger to future
+    space travel. Travelling at roughly 17,500mph, these peices of shrapnel have
+    the ability to annihilate anything they come into contact with. If not properly
+    managed this problem will cascade and escalate until an inescapable barrier of
+    deadly debris is orbiting the earth.
 --- !u!222 &685240732
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -591,7 +596,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAY AGAIN?
+  m_Text: PLAY
 --- !u!222 &942785678
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -671,7 +676,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BACK TO MENU
+  m_Text: 'MENU
 
 '
 --- !u!222 &1146407949
@@ -823,8 +828,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39.1, y: -113}
-  m_SizeDelta: {x: 333.8, y: 65.6}
+  m_AnchoredPosition: {x: 823, y: -467}
+  m_SizeDelta: {x: 160, y: 65.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747640930
 MonoBehaviour:
