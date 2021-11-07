@@ -415,8 +415,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0013ba8348acf5c4caead75fcbc3db29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  completedWave: 0
+  failedWave: 0
   currentWave: 0
   junkCount: 0
+  orbitClutter: 0
   junkCollected: 0
   metalSmall: {fileID: 3060170555859986637, guid: 0dbc3d10ed30f41e89b00a5844c740e6, type: 3}
   metalMedium: {fileID: 3735926253408294235, guid: 6f3ecbccdd71448d99c2a3e84e886c5e, type: 3}
@@ -425,6 +428,8 @@ MonoBehaviour:
   rocket: {fileID: 2329662229387119240, guid: 2db7f1d2f3952464ca9aa59d3b74c28b, type: 3}
   recorder: {fileID: 3092758720689440824, guid: f0844e233f8a0d3468b33035376ba683, type: 3}
   box: {fileID: 6462979158011820301, guid: aef562810dfca49f4b547db7f00550bc, type: 3}
+  panera: {fileID: 3435211757713237379, guid: 6265a101f28ea485385af427b8bebd89, type: 3}
+  holybeam: {fileID: 8680688680115263844, guid: f7cf99d7cf324464b853d1e6afd3a6bf, type: 3}
 --- !u!4 &541443540
 Transform:
   m_ObjectHideFlags: 0
@@ -457,7 +462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 618c4bed74481764f8e62d810fb907a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
 --- !u!96 &631987050
 TrailRenderer:
   serializedVersion: 2
@@ -612,7 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9012e15fe849c144a92b1e0cffccc973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveThingy: {fileID: 541443538}
+  waveDirector: {fileID: 541443538}
   orbitClutter: 0
 --- !u!1001 &655503715
 PrefabInstance:
@@ -647,7 +652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4735194838654956, guid: ceb2e69d6fcbbcf4eb36a02462f60ce6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.37
+      value: -2.37
       objectReference: {fileID: 0}
     - target: {fileID: 4735194838654956, guid: ceb2e69d6fcbbcf4eb36a02462f60ce6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1003,7 +1008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4260686614427368, guid: 09eef1c2dc8961249a5567081bca030d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.28
+      value: -3.28
       objectReference: {fileID: 0}
     - target: {fileID: 4260686614427368, guid: 09eef1c2dc8961249a5567081bca030d, type: 3}
       propertyPath: m_LocalPosition.z

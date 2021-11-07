@@ -5,7 +5,7 @@ using UnityEngine;
 public class collectJunk : MonoBehaviour
 {
 
-    public GameObject waveThingy;
+    public GameObject waveDirector;
     public int orbitClutter;
 
     // Start is called before the first frame update
@@ -22,20 +22,23 @@ public class collectJunk : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag == "Junk") {
-            waveThingy.GetComponent<Wave>().junkCollected++;
-            Debug.Log("Incremented Junk Collected: " + waveThingy.GetComponent<Wave>().junkCollected);
+            waveDirector.GetComponent<Wave>().junkCollected++;
+            Debug.Log("Incremented Junk Collected: " + waveDirector.GetComponent<Wave>().junkCollected);
+            Debug.Log("Current Level: " + waveDirector.GetComponent<Wave>().currentWave);
         }
-        if (waveThingy.GetComponent<Wave>().junkCollected >= waveThingy.GetComponent<Wave>().junkCount-3) {
-            waveThingy.GetComponent<Wave>().initWave(waveThingy.GetComponent<Wave>().currentWave++);
-            Debug.Log("Wave " + waveThingy.GetComponent<Wave>().currentWave);
+        if (waveDirector.GetComponent<Wave>().junkCollected >= waveDirector.GetComponent<Wave>().junkCount) {
+            waveDirector.GetComponent<Wave>().completedWave = true;
+            waveDirector.GetComponent<Wave>().currentWave++;
+            waveDirector.GetComponent<Wave>().initWave(waveDirector.GetComponent<Wave>().currentWave);
+            Debug.Log("Wave " + waveDirector.GetComponent<Wave>().currentWave);
         }
-        if (collision.gameObject.transform.parent.name == "Boundaries") {
-            // Destroy(gameObject);
-            orbitClutter++;
-            Debug.Log("Orbit Cluster is " + orbitClutter);
-            if(orbitClutter >= 100) {
-                Application.Quit();
-            }
-        } 
+        // if (collision.gameObject.transform.parent.name == "Boundaries") {
+        //     // Destroy(gameObject);
+        //     waveDirector.GetComponent<Wave>().orbitClutter++;
+        //     Debug.Log("Orbit Cluster is " + waveDirector.GetComponent<Wave>().orbitClutter);
+        //     if(waveDirector.GetComponent<Wave>().orbitClutter >= 100) {
+        //         Application.Quit();
+        //     }
+        // } 
     }
 }
