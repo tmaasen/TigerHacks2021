@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - DestroyJunk
+  - Junk 2
+  - Junk 1
+  - Junk
   layers:
   - Default
   - TransparentFX
