@@ -303,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_YourFirstButton: {fileID: 794741810}
   m_YourSecondButton: {fileID: 1981024661}
+  m_YourThirdButton: {fileID: 1919680146}
 --- !u!4 &101608961
 Transform:
   m_ObjectHideFlags: 0
