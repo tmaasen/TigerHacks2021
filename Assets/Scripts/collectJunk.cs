@@ -23,7 +23,7 @@ public class collectJunk : MonoBehaviour
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag == "Junk") {
             waveDirector.GetComponent<Wave>().junkCollected++;
-            Debug.Log("Incremented Junk Collected: " + waveDirector.GetComponent<Wave>().junkCollected);
+            // Debug.Log("Incremented Junk Collected: " + waveDirector.GetComponent<Wave>().junkCollected);
             Debug.Log("Current Level: " + waveDirector.GetComponent<Wave>().currentWave);
         }
         if (waveDirector.GetComponent<Wave>().junkCollected >= waveDirector.GetComponent<Wave>().junkCount) {
