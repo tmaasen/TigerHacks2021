@@ -94,14 +94,9 @@ GameObject:
   - component: {fileID: 5979317825074652087}
   - component: {fileID: 6156548906864936030}
   - component: {fileID: 4517463961937691547}
-<<<<<<< HEAD
-  - component: {fileID: 1352440823451803293}
-=======
   - component: {fileID: -8308582490057712705}
->>>>>>> f5eb9c157979ad9590a9b0dc2e09f5204637a33d
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
   m_TagString: Junk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,11 +147,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
-<<<<<<< HEAD
---- !u!114 &1352440823451803293
-=======
 --- !u!114 &-8308582490057712705
->>>>>>> f5eb9c157979ad9590a9b0dc2e09f5204637a33d
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
