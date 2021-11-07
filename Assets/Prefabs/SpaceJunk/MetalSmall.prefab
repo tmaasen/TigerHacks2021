@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8074047397236506916}
   - component: {fileID: -5166292512221649370}
   - component: {fileID: 4651477844588282437}
-  - component: {fileID: -5873445050644729768}
+  - component: {fileID: 5483901690298757933}
   m_Layer: 0
   m_Name: MetalSmall
   m_TagString: Junk
@@ -115,7 +115,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.04
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-5873445050644729768
+--- !u!114 &5483901690298757933
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,3 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5567ad3ee8a16ea4d908d8af3360d668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}

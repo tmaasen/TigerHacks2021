@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5773151584156966645}
   - component: {fileID: 4018148820257658637}
   - component: {fileID: 977096245762973539}
-  - component: {fileID: -6014309070909568806}
+  - component: {fileID: 8723156175093199170}
   m_Layer: 0
   m_Name: Broken_Sattelite
   m_TagString: Junk
@@ -197,7 +197,7 @@ CapsuleCollider:
   m_Height: 1.41
   m_Direction: 2
   m_Center: {x: 0.03, y: -0.05, z: 0.33}
---- !u!114 &-6014309070909568806
+--- !u!114 &8723156175093199170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5567ad3ee8a16ea4d908d8af3360d668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
 --- !u!1 &6589766002052741122
 GameObject:
   m_ObjectHideFlags: 0

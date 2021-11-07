@@ -10,7 +10,6 @@ public class Wave : MonoBehaviour
     bool failedWave;
     public int currentWave;
     public int junkCount;
-    public int orbitClutter;
     public int junkCollected = 0;
     public GameObject metalSmall;
     public GameObject metalMedium;
