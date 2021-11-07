@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class leaveField : MonoBehaviour
 {
-    private int orbitClutter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +22,11 @@ public class leaveField : MonoBehaviour
         } 
         // problem
         else if (collision.gameObject.transform.parent.name == "Boundaries") {
-            if (collision.gameObject.name != "LeftWall") {
+            if (collision.gameObject.name == "TopWall" || collision.gameObject.name == "BottomWall") {
                 Destroy(gameObject);
+            } else if (collision.gameObject.name == "RightWall") {
+                Destroy(gameObject);
+                GameObject.Find("Drone").GetComponent<collectJunk>().orbitClutter++;
             }
         } 
     }

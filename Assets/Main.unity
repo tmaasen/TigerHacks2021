@@ -612,7 +612,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9012e15fe849c144a92b1e0cffccc973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveDirector: {fileID: 541443538}
+  waveThingy: {fileID: 541443538}
+  orbitClutter: 0
 --- !u!1001 &655503715
 PrefabInstance:
   m_ObjectHideFlags: 0

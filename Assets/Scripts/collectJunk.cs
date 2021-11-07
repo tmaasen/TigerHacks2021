@@ -5,7 +5,9 @@ using UnityEngine;
 public class collectJunk : MonoBehaviour
 {
 
-    public GameObject waveDirector;
+    public GameObject waveThingy;
+    public int orbitClutter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,18 +22,18 @@ public class collectJunk : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag == "Junk") {
-            waveDirector.GetComponent<Wave>().junkCollected++;
-            Debug.Log("Incremented Junk Collected: " + waveDirector.GetComponent<Wave>().junkCollected);
+            waveThingy.GetComponent<Wave>().junkCollected++;
+            Debug.Log("Incremented Junk Collected: " + waveThingy.GetComponent<Wave>().junkCollected);
         }
-        if (waveDirector.GetComponent<Wave>().junkCollected >= waveDirector.GetComponent<Wave>().junkCount-3) {
-            waveDirector.GetComponent<Wave>().initWave(waveDirector.GetComponent<Wave>().currentWave++);
-            Debug.Log("Wave " + waveDirector.GetComponent<Wave>().currentWave);
+        if (waveThingy.GetComponent<Wave>().junkCollected >= waveThingy.GetComponent<Wave>().junkCount-3) {
+            waveThingy.GetComponent<Wave>().initWave(waveThingy.GetComponent<Wave>().currentWave++);
+            Debug.Log("Wave " + waveThingy.GetComponent<Wave>().currentWave);
         }
         if (collision.gameObject.transform.parent.name == "Boundaries") {
             // Destroy(gameObject);
-            waveDirector.GetComponent<Wave>().orbitClutter++;
-            Debug.Log("Orbit Cluster is " + waveDirector.GetComponent<Wave>().orbitClutter);
-            if(waveDirector.GetComponent<Wave>().orbitClutter >= 100) {
+            orbitClutter++;
+            Debug.Log("Orbit Cluster is " + orbitClutter);
+            if(orbitClutter >= 100) {
                 Application.Quit();
             }
         } 

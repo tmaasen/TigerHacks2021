@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2083155884844361964}
   - component: {fileID: 6026267930793570301}
   - component: {fileID: 6609430163135406421}
-  - component: {fileID: 5244261710352634617}
+  - component: {fileID: 3497473902476336025}
   m_Layer: 0
   m_Name: MetalAndGlass 1
   m_TagString: Junk
@@ -117,7 +117,7 @@ CapsuleCollider:
   m_Height: 0.3
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: -0.0050000027}
---- !u!114 &5244261710352634617
+--- !u!114 &3497473902476336025
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,3 +129,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5567ad3ee8a16ea4d908d8af3360d668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
