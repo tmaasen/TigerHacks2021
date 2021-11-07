@@ -77,7 +77,7 @@ public class Wave : MonoBehaviour
                     junkCount = 40;
                     string l5GTmessage = "Lasers are powerful, ranged drones that quickly melt junk but won't collect any resources (except from asteroids).";
                     string l5SFmessage = "The worst space junk disaster to date was in 2007, when the Chinese government destroyed a weather satellite during an anti-satellite military test, creating more than 20% of all space debris.";
-                    StartCoroutine(initRandomJunk(junkCount, 5));
+                    StartCoroutine(initRandomJunk(junkCount, 3));
                 }
                 break;
             case 6:
@@ -110,7 +110,7 @@ public class Wave : MonoBehaviour
                     junk.GetComponent<Rigidbody>().velocity = new Vector3((float)(rnd.NextDouble() + 4 * 6), 0, 0);
                 }
                 break;
-                default:
+            default:
                 break;
         }
     }
@@ -151,7 +151,6 @@ public class Wave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Debug.Log("Junk: " + junkCollected);
 
         Text TextBox1 = GameObject.Find("Level").GetComponent<Text>();
         TextBox1.text = "Wave "+ currentWave.ToString();
