@@ -19,6 +19,8 @@ public class Wave : MonoBehaviour
     public GameObject rocket;
     public GameObject recorder;
     public GameObject box;
+    public GameObject panera;
+    public GameObject holybeam;
 
     public void initWave(int pCurrentWave)
     {
@@ -106,7 +108,7 @@ public class Wave : MonoBehaviour
             //yield on a new YieldInstruction that waits for 5 seconds.
             yield return new WaitForSeconds(rnd.Next(1,pEndTimeInterval));
 
-            GameObject[] junkPieces = new GameObject[] { metalSmall, metalSmall, metalSmall, metalMedium, Broken_Sattelite, metalAndGlass, rocket, recorder, box, recorder, metalSmall, rocket, box };
+            GameObject[] junkPieces = new GameObject[] { metalSmall, metalSmall, metalSmall, metalMedium, Broken_Sattelite, metalAndGlass, rocket, recorder, box, recorder, metalSmall, rocket, box, panera, holybeam, holybeam };
             GameObject random = junkPieces[rnd.Next(0, junkPieces.Length)];
             GameObject junk = Instantiate(random) as GameObject;
             Debug.Log("Junk # " + junkCreated + " created at " + Time.time);
