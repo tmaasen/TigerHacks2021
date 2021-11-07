@@ -424,6 +424,7 @@ MonoBehaviour:
   metalAndGlass: {fileID: 3266320489695398583, guid: ce506534f6aab4d0f88e45830779e54f, type: 3}
   rocket: {fileID: 2329662229387119240, guid: 2db7f1d2f3952464ca9aa59d3b74c28b, type: 3}
   recorder: {fileID: 3092758720689440824, guid: f0844e233f8a0d3468b33035376ba683, type: 3}
+  box: {fileID: 6462979158011820301, guid: aef562810dfca49f4b547db7f00550bc, type: 3}
 --- !u!4 &541443540
 Transform:
   m_ObjectHideFlags: 0
