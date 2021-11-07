@@ -92,7 +92,7 @@ public class Wave : MonoBehaviour
             Debug.Log("Junk # " + junkCreated + " created at " + Time.time);
             junk.transform.position = new Vector3((float)-9.1, rnd.Next(-3, 3), 0);
             junk.transform.Translate(Vector3.right * Time.deltaTime);
-            junk.transform.localScale = new Vector3(4, 4, 4);
+            //junk.transform.localScale = new Vector3(4, 4, 4);
             junk.GetComponent<Rigidbody>().velocity = new Vector3((float)(rnd.NextDouble() * 2.5), 0, 0);
             junk.GetComponent<Rigidbody>().angularVelocity = new Vector3(rnd.Next(0, 5), rnd.Next(0, 5), rnd.Next(0, 5));
             junkCreated++;
