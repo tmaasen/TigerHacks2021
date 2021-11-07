@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class leaveField : MonoBehaviour
 {
-    private int junkCollected = 0;
-
+    private int orbitClutter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +26,11 @@ public class leaveField : MonoBehaviour
         // problem
         else if (collision.gameObject.transform.parent.name == "Boundaries") {
             Destroy(gameObject);
+            // orbitClutter++;
+            // Debug.Log("Orbit Cluster is" + orbitClutter);
+            // if(orbitClutter >= 100) {
+            //     Application.Quit();
+            // }
         } 
     }
 }

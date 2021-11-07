@@ -27,5 +27,13 @@ public class collectJunk : MonoBehaviour
             waveDirector.GetComponent<Wave>().initWave(waveDirector.GetComponent<Wave>().currentWave++);
             Debug.Log("Wave " + waveDirector.GetComponent<Wave>().currentWave);
         }
+        if (collision.gameObject.transform.parent.name == "Boundaries") {
+            // Destroy(gameObject);
+            waveDirector.GetComponent<Wave>().orbitClutter++;
+            Debug.Log("Orbit Cluster is " + waveDirector.GetComponent<Wave>().orbitClutter);
+            if(waveDirector.GetComponent<Wave>().orbitClutter >= 100) {
+                Application.Quit();
+            }
+        } 
     }
 }
