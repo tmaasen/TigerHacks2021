@@ -11,6 +11,7 @@ public class Wave : MonoBehaviour
     public bool failedWave;
     public int currentWave;
     public int junkCount;
+    public int junkCreated;
     public int orbitClutter;
     public int junkCollected;
     public GameObject metalSmall;
@@ -24,6 +25,8 @@ public class Wave : MonoBehaviour
     public GameObject holybeam;
     public GameObject Broke_Panel;
     public GameObject helmet;
+
+    private int[] junkCountPerLevel = new int[] {0, 10, 20, 25, 30, 40, 55, 75, 1000};
 
     public void initWave(int pCurrentWave)
     {
@@ -114,7 +117,7 @@ public class Wave : MonoBehaviour
 
     IEnumerator initRandomJunk(int pJunkCount, int pEndTimeInterval)
     {
-        int junkCreated = 1;
+        junkCreated = 1;
         //Print the time of when the function is first called.
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
         var rnd = new System.Random();
@@ -148,14 +151,23 @@ public class Wave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Junk: " + junkCollected);
+        // Debug.Log("Junk: " + junkCollected);
 
-        Text TextBoxToUse = GameObject.Find("Level").GetComponent<Text>();
-        TextBoxToUse.text = "WAVE "+currentWave.ToString();
+        Text TextBox1 = GameObject.Find("Level").GetComponent<Text>();
+        TextBox1.text = "Wave "+ currentWave.ToString();
 
-        Text TextBoxToUse = GameObject.Find("Counter").GetComponent<Text>();
-        TextBoxToUse.text = "Junk Collected: "+junkCollected.ToString();
+        Text TextBox2 = GameObject.Find("Counter").GetComponent<Text>();
+        TextBox2.text = "Junk Collected: "+ junkCollected.ToString() + " / " + junkCountPerLevel[currentWave];
 
+        Text TextBox3 = GameObject.Find("LostJunk").GetComponent<Text>();
+        TextBox3.text = "Junk Lost: "+ GameObject.Find("Drone").GetComponent<collectJunk>().orbitClutter;
         
+        if (GameObject.Find("Drone").GetComponent<collectJunk>().orbitClutter == 25) {
+            Time.timeScale = 0;
+            Application.LoadLevel("GameOver");
+            // pause game
+            // show game over screen with button to go back to main menu        
+        }
+
     }
 }
