@@ -22,6 +22,8 @@ public class Wave : MonoBehaviour
     public GameObject box;
     public GameObject panera;
     public GameObject holybeam;
+    public GameObject Broke_Panel;
+    public GameObject helmet;
 
     public void initWave(int pCurrentWave)
     {
@@ -99,7 +101,7 @@ public class Wave : MonoBehaviour
                     junkCount = 1000;
                     var rnd = new System.Random();
                     StartCoroutine(initRandomJunk(junkCount, 1));
-                    GameObject[] junkPieces = new GameObject[] { metalSmall, metalSmall, metalSmall, metalMedium, Broken_Sattelite, metalAndGlass, rocket, recorder, box, recorder, metalSmall, rocket, box, panera, holybeam, holybeam };
+                    GameObject[] junkPieces = new GameObject[] { metalSmall, metalSmall, metalSmall, helmet, helmet, helmet, metalMedium, Broken_Sattelite, metalAndGlass, rocket, recorder, box, recorder, metalSmall, rocket, box, panera, holybeam, holybeam, Broke_Panel, Broke_Panel };
                     GameObject random = junkPieces[rnd.Next(0, junkPieces.Length)];
                     GameObject junk = Instantiate(random) as GameObject;
                     junk.GetComponent<Rigidbody>().velocity = new Vector3((float)(rnd.NextDouble() + 4 * 6), 0, 0);
