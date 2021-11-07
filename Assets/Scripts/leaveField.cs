@@ -22,8 +22,9 @@ public class leaveField : MonoBehaviour
             Destroy(gameObject);
         } else if (collision.gameObject.name == "Drone") {
             Destroy(gameObject);
-            
             Wave w = new Wave();
+            w.junkCollected++;
+            Debug.Log("Collected " + w.junkCollected);
             if (junkCollected == w.junkCount) {
                 w.initWave(w.currentWave++);
             }
